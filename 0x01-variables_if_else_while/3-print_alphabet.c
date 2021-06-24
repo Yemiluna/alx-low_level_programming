@@ -1,4 +1,3 @@
-  GNU nano 4.8                                                   3-print_alphabet.c
 #include <stdio.h>
 /**
 * main - main block
