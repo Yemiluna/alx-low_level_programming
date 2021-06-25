@@ -1,20 +1,21 @@
-#include "holberton.h"
+#include"holberton.h"
+
 /**
-* main - Print "Holberton" followed by a new line.
-* Description: You are not allowed to include standard libraries.
-* Return: 0
+* main - Entry point
+*
+* Return: Always 0 (Success)
 */
 int main(void)
 {
-char holberton[] = "Holberton";
-int i = 0;
-
-while (holberton[i] != '\0')
-{
-_putchar(holberton[i]);
-i++;
-}
-_putchar('\n');
-
-return (0);
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
+	return (0);
 }
