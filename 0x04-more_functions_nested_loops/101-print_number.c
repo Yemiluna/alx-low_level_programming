@@ -1,50 +1,46 @@
 #include "holberton.h"
 
 /**
- * print_number - print number
- * @n: input value
- *
- * Description:  prints an integer
- * Return: Always (0)
- */
-
+* print_number - Function that prints an integer.
+* @n: int type number
+* Description: Can only use _putchar to print.
+*/
 void print_number(int n)
 {
-if ((n < 0) && (n >= -9))
+long m; /* power of 10 */
+int c; /* boolean check */
+long num; /* convert int to long */
+
+num = n;
+/* negatives */
+if (num < 0)
 {
+num *= -1;
 _putchar('-');
-_putchar((n * -1) + '0');
 }
-else if (n <= -10)
+
+/* count up */
+m = 1;
+c = 1;
+while (c)
 {
-_putchar('-');
-_putchar(((n / 10) * -1) + '0');
-_putchar(((n % 10)  * -1) + '0');
+if (num / (m * 10) > 0)
+m *= 10;
+else
+c = 0;
 }
-else if (n == 0)
+
+/* count down */
+while (num >= 0)
 {
-_putchar(n + '0');
+if (m == 1)
+{
+_putchar(num % 10 + '0');
+num = -1;
 }
-else if ((n > 0) && (n <= 9))
+else
 {
-_putchar(n + '0');
-}
-else if ((n >= 10) && (n <= 99))
-{
-_putchar((n / 10) + '0');
-_putchar((n % 10) + '0');
-}
-else if ((n >= 100) && (n <= 999))
-{
-_putchar((n / 100) + '0');
-_putchar(((n / 10) % 10) + '0');
-_putchar((n % 10) + '0');
-}
-else if ((n >= 1000) && (n <= 9999))
-{
-_putchar((n / 1000) + '0');
-_putchar((n / 100) % 10 + '0');
-_putchar((n / 10) % 10 + '0');
-_putchar((n % 10) + '0');
+_putchar((num / m % 10) + '0');
+m /= 10;
 }
 }
