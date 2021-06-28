@@ -1,22 +1,23 @@
 #include "holberton.h"
-
 /**
- *puts2 - prints every other charcter of a string.
- *@str: a string value.
+ * puts2 - prints even indeces
+ *
+ * @str: pointer to a character array
+ *
+ * Description: prints even indeces
+ * Return: nothing
  */
 
 void puts2(char *str)
 {
-int a, l;
+	int index = 0;
 
-while (str[l] != '\0')
-{
-l++;
-}
+	while (str[index] != '\0')
+	{
+		if (index % 2 == 0)
+			putchar(str[index]);
+		index++;
+	}
+	putchar('\n');
 
-for (a = 0; a < l; a = a + 2)
-{
-_putchar(str[a]);
-}
-_putchar('\n');
 }
