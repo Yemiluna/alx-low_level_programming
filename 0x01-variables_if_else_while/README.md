@@ -1,4 +1,5 @@
-# Variables, if, else and while
+## Projects
+All of the following folders are projects done during the studies:# Variables, if, else and while
 
 Project done during **ALX Software Engineering studies** at **ALX Software Engineering**.
 It aims to learn about arithmetic operators, relational operators, boolean operators, comments, declaring variables and loops in **C language**.
@@ -8,8 +9,8 @@ It aims to learn about arithmetic operators, relational operators, boolean opera
 * C files are compiled using `gcc 4.8.4`
 * Tested on Ubuntu 14.04 LTS
 
-## Projects
-All of the following folders are projects done during the studies:
+## Files
+All of the following files are programs written in C:
 
 | File name | Description |
 | ------------ | ----------- |
