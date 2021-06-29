@@ -1,23 +1,25 @@
 #include "holberton.h"
-/**
- * puts2 - prints even indeces
- *
- * @str: pointer to a character array
- *
- * Description: prints even indeces
- * Return: nothing
- */
 
+/**
+ *  * puts2 - prints one char out of 2 of a string
+ *   * followed by a new line
+ *    * @str: string to print the chars from
+ */
 void puts2(char *str)
 {
-	int index = 0;
+	int len, i;
 
-	while (str[index] != '\0')
+	len = 0;
+
+	while (str[len] != '\0')
 	{
-		if (index % 2 == 0)
-			putchar(str[index]);
-		index++;
+		len++;
 	}
-	putchar('\n');
 
+	for (i = 0; i < len; i += 2)
+	{
+		_putchar(str[i]);
+	}
+
+	_putchar('\n');
 }
