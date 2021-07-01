@@ -1,3 +1,4 @@
+##More pointers, arrays and strings
 Project done during at **ALX Software Engineering studies**. It aims to learn about pointers and arrays in **C language**.
 
 ## Technologies
