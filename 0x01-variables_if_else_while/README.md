@@ -1,4 +1,4 @@
-## Projects
+## Variables, if, else and while
 All of the following folders are projects done during the studies:# Variables, if, else and while
 
 Project done during **ALX Software Engineering studies** at **ALX Software Engineering**.
