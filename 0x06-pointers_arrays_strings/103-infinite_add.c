@@ -1,82 +1,63 @@
-/*
-* File: 102-infinite_add.c
-* Auth: Brennan D Baraban
-*/
-
 #include "holberton.h"
 
-char *add_strings(char *n1, char *n2, char *r, int r_index);
-char *infinite_add(char *n1, char *n2, char *r, int size_r);
-
 /**
-* add_strings - Adds the numbers stored in two strings.
-* @n1: The string containing the first number to be added.
-* @n2: The string containing the second number to be added.
-* @r: The buffer to store the result.
-* @r_index: The current index of the buffer.
-*
-* Return: If r can store the sum - a pointer to the result.
-*         If r cannot store the sum - 0.
-*/
-char *add_strings(char *n1, char *n2, char *r, int r_index)
+ * infinite_add - add 2 integers.
+ * @n1: integer
+ * @n2: integer
+ * @r: buffer
+ * size_r: size of r
+ * Return: char
+ */
+
+int _atoi(char *s)
 {
-int num, tens = 0;
-for (; *n1 && *n2; n1--, n2--, r_index--)
-{
-num = (*n1 - '0') + (*n2 - '0');
-num += tens;
-*(r + r_index) = (num % 10) + '0';
-tens = num / 10;
-}
-for (; *n1; n1--, r_index--)
-{
-num = (*n1 - '0') + tens;
-*(r + r_index) = (num % 10) + '0';
-tens = num / 10;
-}
-for (; *n2; n2--, r_index--)
-{
-num = (*n2 - '0') + tens;
-*(r + r_index) = (num % 10) + '0';
-tens = num / 10;
+	int sign = 1, resp = 0, firstNum;
+
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	{
+		if (s[firstNum] == '-')
+		{
+			sign *= -1;
+		}
+	}
+
+	for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
 }
 
-if (tens && r_index >= 0)
+void int_to_string(int n)
 {
-*(r + r_index) = (tens % 10) + '0';
-return (r + r_index);
-}
-else if (tens && r_index < 0)
-return (0);
+int divisor = 1, i, resp;
 
-return (r + r_index + 1);
+
+for (i = 0; n / divisor > 9; i++)
+{
+	divisor *= 10;
 }
-/**
-* infinite_add - Adds two numbers.
-* @n1: The first number to be added.
-* @n2: The second number to be added.
-* @r: The buffer to store the result.
-* @size_r: The buffer size.
-*
-* Return: If r can store the sum - a pointer to the result.
-*         If r cannot store the sum - 0.
-*/
+
+char str[i];
+
+for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
+{
+	resp = n / divisor;
+	str[cmpt] = '0' + resp;
+	n = n - resp * divisor;
+}
+str[i] = ('0' + n);
+
+}
+
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int index, n1_len = 0, n2_len = 0;
+    int sum, a, b;
+    a = _atoi(n1);
+    b = _atoi(n2);
 
-for (index = 0; *(n1 + index); index++)
-n1_len++;
-
-for (index = 0; *(n2 + index); index++)
-n2_len++;
-
-if (size_r <= n1_len + 1 || size_r <= n2_len + 1)
-return (0);
-
-n1 += n1_len - 1;
-n2 += n2_len - 1;
-*(r + size_r) = '\0';
-
-return (add_strings(n1, n2, r, --size_r));
+    sum = a + b;
 }
