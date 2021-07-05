@@ -1,22 +1,25 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stddef.h>
 
 /**
- * print_chessboard - prints the chessboard
- * @a: input pointer.
- * Return: no return.
+ * print_chessboard - print a chess board
+ *
+ * @a: pointer to a multidimensional array
+ *
  */
 void print_chessboard(char (*a)[8])
 {
-	unsigned int i, m = 0;
+	int i, j, size;
 
-	for (i = 0; i < 64; i++)
+	size = 8;
+	for (i = 0; i < size; ++i)
 	{
-		if (i % 8 == 0 && i != 0)
+		for (j = 0; j < size; ++j)
 		{
-			m = i;
-			_putchar('\n');
+			printf("%c", a[i][j]);
 		}
-		_putchar(a[i / 8][i - m]);
+		printf("\n");
 	}
-	_putchar('\n');
 }
+
