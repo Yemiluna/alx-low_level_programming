@@ -1,14 +1,2 @@
-#include "holberton.h"
-#include <stdio.h>
-/**
-* _putchar - writes the character c to stdout
-*/
 int _putchar(char c);
-/**
-* _memset - fills the first n bytes of the memory area pointed to by s 
-* with the constant byte b
-*/
 char *_memset(char *s, char b, unsigned int n);
-/**
-* _memcpy - copies n bytes from memory area src to memory area dest
-*/
