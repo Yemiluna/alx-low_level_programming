@@ -1,6 +1,20 @@
 #include "holberton.h"
 #include <stdio.h>
+
+/**
+ * _isdigit - function that checks for a digit
+ * @c: takes in a digit
+ * Return: Always 0.
+ */
+
 int _isdigit(int c)
 {
-        return (0);
+if (c >= '0' && c <= '9')
+{
+return (1);
+}
+else
+{
+return (0);
+}
 }

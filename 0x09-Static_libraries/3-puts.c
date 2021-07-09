@@ -1,6 +1,23 @@
 #include "holberton.h"
-#include <stdio.h>
-void _puts(char *s)
+
+/**
+ *_puts - a function to print strings.
+ *@str: a string value to be printed,
+ *Return: void doesnt have return value.
+ */
+
+void _puts(char *str)
 {
-        return (0);
+	int count = 0;
+
+	while (count >= 0)
+	{
+		if (str[count] == '\0')
+		{
+		_putchar('\n');
+		break;
+		}
+		_putchar(str[count]);
+		count++;
+	}
 }
