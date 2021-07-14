@@ -12,5 +12,8 @@ All of the following files are programs written in C:
 
 | File name | Description |
 | ------------ | ----------- |
-| [`0-`](https://github.com/Yemiluna/alx-system_engineering-devops/blob/main/0x0B-malloc_free/0-) | Prints "Hello, World", followed by a new line to the standard output |
-
+| [`0-`](https://github.com/Yemiluna/alx-system_engineering-devops/blob/main/0x0B-malloc_free/0-) |  |
+| [`0-`](https://github.com/Yemiluna/alx-system_engineering-devops/blob/main/0x0B-malloc_free/0-) |  |
+| [`0-`](https://github.com/Yemiluna/alx-system_engineering-devops/blob/main/0x0B-malloc_free/0-) |  |
+| [`0-`](https://github.com/Yemiluna/alx-system_engineering-devops/blob/main/0x0B-malloc_free/0-) |  |
+| [`0-`](https://github.com/Yemiluna/alx-system_engineering-devops/blob/main/0x0B-malloc_free/0-) |  |
