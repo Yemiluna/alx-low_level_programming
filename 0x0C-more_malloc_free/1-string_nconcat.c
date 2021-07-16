@@ -1,39 +1,39 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * string_nconcat - concatenates two strings
- * @s1: destination string
- * @s2: source string
- * @n: number of bytes from s2 to be copied
- * Return: concatenated string
- */
-
+ * *string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: limit of s2
+ * Return: pointer to new space in memory or null
+ **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int t1, t2, i;
+	char *strDup;
+	int i;
+	unsigned int j;
 
 	if (s1 == NULL)
-		t1 = 0;
-	for (t1 = 0; s1[t1]; ++t1)
-		;
+		s1 = "";
 	if (s2 == NULL)
-		t2 = 0;
-	for (t2 = 0; s2[t2]; ++t2)
-		;
-	if (t2 > n)
-		t2 = n;
-	p = malloc((t1 + t2 + 1) * sizeof(char));
-	if (p == NULL)
+		s2 = "";
+	i = 0;
+	while (s1[i] != '\0')
+		i++;
+	strDup = malloc(sizeof(char) * (i + n + 1));
+	if (strDup == NULL)
 		return (NULL);
-	for (i = 0; i < t1; i++)
-		p[i] = s1[i];
-	for (i = 0; i < t2; i++)
-		p[t1 + i] = s2[i];
-	p[t1 + t2] = '\0';
-	return (p);
+	i = j = 0;
+	while (s1[i] != '\0')
+	{
+		strDup[i] = s1[i];
+		i++;
+	}
+	while (j < n && s2[j] != '\0')
+	{
+		strDup[i] = s2[j];
+		i++, j++;
+	}
+	strDup[i] = '\0';
+	return (strDup);
 }
-
-
